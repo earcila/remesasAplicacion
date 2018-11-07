@@ -1,0 +1,39 @@
+{
+  "generator-jhipster": {
+    "applicationType": "monolith",
+    "gitCompany": "",
+    "baseName": "remesas",
+    "packageName": "io.github.jhipster.application",
+    "packageFolder": "io/github/jhipster/application",
+    "serverPort": 8080,
+    "serviceDiscoveryType": false,
+    "authenticationType": "jwt",
+    "uaaBaseName": "../uaa",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "enableSwaggerCodegen": false,
+    "messageBroker": false,
+    "buildTool": "maven",
+    "useSass": false,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "enableTranslation": true,
+    "nativeLanguage": "es",
+    "languages": [
+      "en",
+      "es"
+    ],
+    "clientFramework": "angularX",
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "5.6.1",
+    "jwtSecretKey": "MjQ1NTE5ZWQ5MGU2MDA0ZTYzZGZmOWRiNDllYTk2ZmUzY2I4ZDJlMWQyYzYzNGQ4MGYzNjY0YzYwMTlkZDYxMDc1YjQ2ZDNiMmY5MTgzNGFkMjZmY2VlMjJiMjQzODA1OWEzNjNhZDE2MzZiMjFmMzdkZGI1NjBiZWJjMmIxYzA="
+  },
+  "git-provider": "GitHub",
+  "git-company": "earcila",
+  "repository-name": "remesasAplicacion"
+}
