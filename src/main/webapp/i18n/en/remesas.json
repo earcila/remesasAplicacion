@@ -1,0 +1,23 @@
+{
+    "remesasApp": {
+        "remesas": {
+            "home": {
+                "title": "Remesas",
+                "createLabel": "Create a new Remesas",
+                "createOrEditLabel": "Create or edit a Remesas"
+            },
+            "created": "A new Remesas is created with identifier {{ param }}",
+            "updated": "A Remesas is updated with identifier {{ param }}",
+            "deleted": "A Remesas is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Remesas {{ id }}?"
+            },
+            "detail": {
+                "title": "Remesas"
+            },
+            "empresa": "Empresa",
+            "tasa": "Tasa",
+            "fechaAct": "Fecha Act"
+        }
+    }
+}

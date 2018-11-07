@@ -1,0 +1,56 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-remesas-heading" jhiTranslate="remesasApp.remesas.home.createOrEditLabel">Create or edit a Remesas</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!remesas.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="remesas.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="remesasApp.remesas.empresa" for="field_empresa">Empresa</label>
+                    <input type="text" class="form-control" name="empresa" id="field_empresa"
+                        [(ngModel)]="remesas.empresa" required/>
+                    <div [hidden]="!(editForm.controls.empresa?.dirty && editForm.controls.empresa?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.empresa?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="remesasApp.remesas.tasa" for="field_tasa">Tasa</label>
+                    <input type="text" class="form-control" name="tasa" id="field_tasa"
+                        [(ngModel)]="remesas.tasa" required/>
+                    <div [hidden]="!(editForm.controls.tasa?.dirty && editForm.controls.tasa?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.tasa?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="remesasApp.remesas.fechaAct" for="field_fechaAct">Fecha Act</label>
+                    <div class="input-group">
+                        <input id="field_fechaAct" type="text" class="form-control" name="fechaAct" ngbDatepicker  #fechaActDp="ngbDatepicker" [(ngModel)]="remesas.fechaAct"
+                        />
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="fechaActDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
